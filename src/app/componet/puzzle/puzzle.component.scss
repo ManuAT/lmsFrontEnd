@@ -1,0 +1,133 @@
+* {
+    font-family: 'Fresca', georgia, sans-serif;
+}
+
+.container {
+		width: 900px;
+		margin: 0 auto;
+}
+
+.wrapper {
+    margin-top: 80px;
+    text-align: center;
+    width: 350px;
+    display: inline-block;
+}
+
+.sidebar1 {
+    margin-top: 80px;
+    width: 225px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.sidebar2 {
+    margin-top: 80px;
+    width: 225px;
+    display: inline-block;
+    font-family: georgia, sans-serif;
+    font-size: 1.6em;
+}
+
+.tile {
+    width: 80px;
+    height: 80px;
+    background: #990000;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+    color: #CCCC66;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 80px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    box-shadow: 0px 4px #700000;
+    font-size: 1.2em;
+    }
+
+#sq1,#sq2,#sq3,#sq4,#sq5,#sq6,#sq7,#sq8,#sq0{
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../../assets/AI-20171012113039221.jpg');
+}
+
+.tile:active {
+    box-shadow: 0px 0px #990000;
+    top: 4px;
+}
+
+.lighttile {
+    background: #BB0000;
+}
+
+.darkanswer {
+    background: #808080;
+    color: white;
+    opacity: 1;
+}
+
+.darkanswer:hover {
+    opacity: .8;
+}
+
+.blank {
+    width: 80px;
+    height: 80px;
+    background: #CCC;
+    display: inline-block;
+    position: relative;
+    transition: 0.2s;
+    border-radius: 5px;
+    line-height: 80px;
+    vertical-align: bottom;
+    color: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    box-shadow: 0px 4px #666666;
+    font-size: 1.2em;
+}
+
+.row {
+    margin-top: 9px;
+}
+
+.answers {
+    background-color: #CCCC66;
+    color: #990000;
+    box-shadow: 0px 4px #CCBB55;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 8px;
+    border-radius: 5px;
+    width: 200px;
+    opacity: 0.75;
+    float: right;
+}
+
+.victory:hover {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.gameborder {
+    width: 290px;
+    height: 290px;
+    display: inline-block;
+    border-radius: 5px;
+}
