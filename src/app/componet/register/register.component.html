@@ -1,5 +1,12 @@
-<p>
-  please Enter the register Number
-  <input type="text" [(ngModel)]="regNumber" >
-  <button (click)='getdetails()'>Start Timer</button>
-</p>
+
+<div class="container">
+  <p>
+   <label> please Enter the register Number</label><br>
+   <input [(ngModel)]="regCode" #ctrl="ngModel" required>
+    <br>
+   {{regNumber}}
+   
+    <button class="button"  (click)="[validate()]" (click)="registered=true" >Register</button>
+    <app-timer  [start]="registered"></app-timer>
+  </p>
+</div>

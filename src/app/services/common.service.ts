@@ -4,16 +4,20 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommonService {
-
+regCommon : number;
   constructor(private http: HttpClient) { }
   getDetails(code){
     return this.http.get('http://localhost:8080/api/lms',{params:{code}})
   }
-    taskupdate(code){
-      return this.http.put('http://localhost:8080/api/lms',{code})
+    taskupdate(code,task,totalLostMin){
+      return this.http.put('http://localhost:8080/api/lms',{code,task,totalLostMin})
     }
+    // clueupdate(code,totalLostMin){
+    //   return this.http.put('http://localhost:8080/api/lms',{code,totalLostMin})
+    // }
     create(code){
-      return this.http.put('http://localhost:8080/api/lms',{code})
-    }
-  
+      return this.http.post('http://localhost:8080/api/lms',{code})
+    } 
 }
+
+

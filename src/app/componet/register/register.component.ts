@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {TimerComponent} from '../timer/timer.component';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+
 import {CommonService} from "../../services/common.service";
 
 @Component({
@@ -12,9 +12,19 @@ export class RegisterComponent implements OnInit {
   constructor(private common : CommonService) {
     
    }
-
+   regCode : number;
+   
   ngOnInit() {
-     
+    
+    
+  }
+  
+  validate()
+  {
+    this.common.regCommon = this.regCode ;
+    console.log(this.regCode);
+    
+    this.common.create(this.regCode);
   }
 }
 

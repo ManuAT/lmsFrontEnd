@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import {CommonService} from "../../services/common.service";
 import { createOfflineCompileUrlResolver } from '@angular/compiler';
 
@@ -7,28 +7,35 @@ import { createOfflineCompileUrlResolver } from '@angular/compiler';
   templateUrl: './timer.component.html',
   styleUrls: ['./timer.component.scss']
 })
-export class TimerComponent implements OnInit {
+export class TimerComponent implements OnChanges {
 
+  @Input() start: any;
+  regTimer : number;
   constructor(private common : CommonService) {
 
    }
 
-  ngOnInit() {
+  ngOnChanges( changes) {
+
+   if(changes.start.currentValue)
+    this.registered();
     
-    this.common.getDetails(33).subscribe((data:any)=>{
-      // console.log(data.time);
+  }
+  registered(){
+    this.regTimer = this.common.regCommon;
+    console.log(this.regTimer);
+    this.common.getDetails(this.regTimer).subscribe((data:any)=>{
+     
       // console.log(new Date());
       var completedSeconds = ((new Date().getTime() - new Date(data.time).getTime()) / 1000);
-      var remainingSec = 7200-completedSeconds;
-      
-
-
-
+      var totalLostMin = data.totalLostMin;
+      var remainingSec = 7200-completedSeconds-(totalLostMin*60);
       this.timeLeft = Math.floor(remainingSec);
       console.log(this.timeLeft);
       this.startTimer()
   })
   }
+  
   timeLeft;
   interval;
   timeLeftString;

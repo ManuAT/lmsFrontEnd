@@ -1,6 +1,8 @@
+<!-- <button (click)="registered=true">Register</button>
+<app-timer  [start]="registered"></app-timer> -->
 
+<div class="container">
 <app-register *ngIf="pageNumber==1"></app-register>
-
 <app-puzzle *ngIf="pageNumber==2"></app-puzzle>
-
-<app-timer *ngIf="pageNumber==3" ></app-timer>
+<app-timer *ngIf="registered==true"></app-timer>
+</div>

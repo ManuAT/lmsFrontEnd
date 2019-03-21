@@ -250,6 +250,8 @@ export class PuzzleComponent implements OnInit {
               clearInterval(answerInterval);
               $('.sidebar2').html("It took you " + moves + " moves, but was it really you?");
               $('.sidebar2').show();
+              console.log("code is ");
+              alert("code is ");
               solving = false;
           }
       };
@@ -342,6 +344,8 @@ export class PuzzleComponent implements OnInit {
                   if (calculateMD(board) == 0) {
                       $('.sidebar2').html("You won the game in " + moves + " moves!");
                       $('.sidebar2').show();
+                    console.log("ready");
+                    alert("code is ");
                       gameWon = true;
                   }
           }
