@@ -6,36 +6,39 @@ import {CommonService} from "../../../services/common.service";
   styleUrls: ['./screen1.component.scss']
 })
 export class Screen1Component implements OnInit {
-  roomCode : String;
-  constructor(private common : CommonService) { }
+  test : String;
+  clueb : boolean;
+  constructor(public common : CommonService) { }
 
   ngOnInit() {
+    this.clueb = true;
   }
   clue1()
   {
-  if(this.roomCode=="123")
-      { 
-        alert("code");
-        this.common.taskupdate(this.common.regCommon,null,30).subscribe((data)=>{
+   
+        alert("I usually get home before 3:22");
+        this.common.taskupdate(this.common.regCommon,null,5).subscribe((data)=>{
           console.log(data,"hello");
+          this.common.resetTimer = false;
+          setTimeout(()=>{
+          this.common.resetTimer = true;
           
+          })
+          this.clueb = false;
         }) 
-    }
-  }
-  clue2()
-  {
-  if(this.roomCode=="123")
-      { 
-        alert("code");
-    }
+       
+    
   }
   done()
   {
-  
+    if(this.test.toLowerCase()=="d34dm4n")
+    {
   this.common.taskupdate(this.common.regCommon,2,null).subscribe((data)=>{
-    console.log(data,"hello");
-    this.common.pageNumber=4;
+    // console.log(data,"hello");
+    //alert("Remeber this");
+    this.common.pageNumber=2;
+  
   })
-
+    }
   }
 }

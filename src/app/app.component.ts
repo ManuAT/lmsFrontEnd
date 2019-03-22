@@ -7,7 +7,7 @@ import {CommonService} from "./services/common.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  constructor(private common: CommonService){
+  constructor(public common: CommonService){
 
   }
   ngOnInit(){

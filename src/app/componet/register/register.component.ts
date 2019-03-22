@@ -9,7 +9,7 @@ import {CommonService} from "../../services/common.service";
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private common : CommonService) {
+  constructor(public common : CommonService) {
     
    }
    regCode : number;
@@ -25,11 +25,12 @@ export class RegisterComponent implements OnInit {
     this.common.regCommon = this.regCode ;
     console.log(this.regCode);
     
-    this.common.create(this.regCode).subscribe((data)=>{
+    this.common.create(this.regCode).subscribe((data:any)=>{
 console.log(data);
+this.common.pageNumber = data.task;
     this.registered=true
     setTimeout(()=>{
-      this.common.pageNumber=2;
+      // this.common.pageNumber=2;
       this.common.resetTimer = true;
     }) 
     })

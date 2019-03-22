@@ -1,21 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 // import {$} from 'jquery';
 declare var $: any;
+
 import {CommonService} from "../../services/common.service";
 @Component({
   selector: 'app-puzzle',
   templateUrl: './puzzle.component.html',
   styleUrls: ['./puzzle.component.scss']
 })
-export class PuzzleComponent implements OnInit {
 
-  constructor(private common : CommonService){}
-  isSolved = false;
+export class PuzzleComponent implements OnInit {
+   
+  constructor(public common : CommonService){}
+  isSolved;
   ngOnInit() {
-    
+     this.isSolved = '123';
   }
   ngAfterViewInit() {
-    $('document').ready(function() {
+      let parentScope = this;
+    $('document').ready(()=> {
       console.log("ready");
       var board = [0,1,2,3,4,5,6,7,8];
       var gameWon = false;
@@ -250,9 +253,16 @@ export class PuzzleComponent implements OnInit {
               clearInterval(answerInterval);
               $('.sidebar2').html("It took you " + moves + " moves, but was it really you?");
               $('.sidebar2').show();
-              console.log("code is ");
-              alert("code is ");
-              this.isSolved = true;
+              console.log("computer ");
+              console.log(parentScope.isSolved);
+              parentScope.isSolved = false;
+              parentScope.common.taskupdate(parentScope.common.regCommon,null,10).subscribe((data)=>{
+                // console.log(data,"hello");
+                parentScope.common.resetTimer = false;
+                setTimeout(()=>{
+                parentScope.common.resetTimer = true;
+                })
+               }) 
               solving = false;
           }
       };
@@ -311,7 +321,9 @@ export class PuzzleComponent implements OnInit {
           }
       });
   
-      $('#autosolve').on('click', function() {
+      $('#autosolve').on('click', ()=> {
+          console.log(this.common.regCommon)
+        //   this.isSolved = "123123";
           stopAnswers();
           if (!gameWon) {
               solving = true;
@@ -345,9 +357,11 @@ export class PuzzleComponent implements OnInit {
                   if (calculateMD(board) == 0) {
                       $('.sidebar2').html("You won the game in " + moves + " moves!");
                       $('.sidebar2').show();
-                    console.log("ready");
-                    alert("code is ");
-                    this.isSolved = true;
+                    console.log("mannual");
+                  
+                    parentScope.isSolved = false;
+                    console.log(parentScope.isSolved);
+                    
                       gameWon = true;
                   }
           }
@@ -356,9 +370,15 @@ export class PuzzleComponent implements OnInit {
   }
 
   done(){
-        console.log(this.isSolved);
+    this.common.taskupdate(this.common.regCommon,2,null).subscribe((data)=>{
+        // console.log(data,"hello");
+        // alert("Remeber this");
+        this.common.pageNumber=11;
+      })
+    //     console.log(this.isSolved);    
         
-      this.common.pageNumber=3;
+    //   this.common.pageNumber=0;
   }
+
 
 }

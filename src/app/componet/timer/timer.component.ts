@@ -11,7 +11,7 @@ export class TimerComponent implements OnChanges {
 
   @Input() start: any;
   regTimer : number;
-  constructor(private common : CommonService) {
+  constructor(public common : CommonService) {
 
    }
 
@@ -29,9 +29,15 @@ export class TimerComponent implements OnChanges {
       // console.log(new Date());
       var completedSeconds = ((new Date().getTime() - new Date(data.time).getTime()) / 1000);
       var totalLostMin = data.totalLostMin;
+      // this.common.pageNumber = data.task;
       var remainingSec = 7200-completedSeconds-(totalLostMin*60);
       this.timeLeft = Math.floor(remainingSec);
       console.log(this.timeLeft, this.common.pageNumber);
+      if(this.timeLeft<0)
+        {
+          console.log("to game over page") 
+          this.common.pageNumber=9;
+        }
       this.startTimer()
   })
   }
@@ -54,7 +60,7 @@ startTimer() {
         var mDisplay = m>=10?+m:"0"+m;
         var sDisplay = s>=10?":"+s:":0"+s;
         this.timeLeftString = hDisplay + mDisplay + sDisplay;
-
+        
     },1000)
   }
 }

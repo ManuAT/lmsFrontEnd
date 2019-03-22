@@ -5,23 +5,27 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CommonService {
 regCommon : number;
-pageNumber=1;
+pageNumber=10;
 resetTimer = false;
+
   constructor(private http: HttpClient) { }
 
   getDetails(code){
-    return this.http.get('http://localhost:8080/api/lms',{params:{code}})
+    return this.http.get('http://lms2k19.herokuapp.com/api/lms',{params:{code}})
   }
     taskupdate(code,task,totalLostMin){
-      return this.http.put('http://localhost:8080/api/lms',{code,task,totalLostMin})
+      return this.http.put('http://lms2k19.herokuapp.com/api/lms',{code,task,totalLostMin})
     }
     // clueupdate(code,totalLostMin){
-    //   return this.http.put('http://localhost:8080/api/lms',{code,totalLostMin})
+    //   return this.http.put('http://lms2k19.herokuapp.com/api/lms',{code,totalLostMin})
     // }
     create(code){
-      return this.http.post('http://localhost:8080/api/lms',{code})
+      return this.http.post('http://lms2k19.herokuapp.com/api/lms',{code})
     } 
-
+    map()
+    {
+      window.open('https://drive.google.com/open?id=1bC3ta_xg188h5z9us4Qd_tcygNMq3m2h','_blank')
+    }
 }
 
 

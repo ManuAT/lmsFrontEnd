@@ -9,7 +9,7 @@
 <body>
 <div class="container">
 <div class="wrapper">
-    <h1>8 Tile Puzzle</h1>
+    <!-- <h1>8 Tile Puzzle</h1> -->
     <div class="gameborder">
         <div class="row">
             <div class="tile" id="sq0"></div>
@@ -27,9 +27,11 @@
             <div class="tile" id="sq8"></div>
         </div>
         <div class="autosolve1">
-            <button id="autosolve">Solve Puzzle</button><br><br><br><br>
-            <button id="ok" (click)='done()' >OK</button>
+            <button id="autosolve"  *ngIf="isSolved" >Help</button><br><br><br>
+            
+            <button id="ok" (click)='done()' *ngIf="!isSolved">Proceed</button>
         </div>
+        <p id="autosolve"  *ngIf="isSolved" >Note: Your will loose 10 minutes</p>
         
     </div>
 </div>

@@ -4,16 +4,17 @@
       <div class="row timer">
         
         <div class="col-xs-6 pull-right text-right">
-           <button type="submit" class="btn btn-lg b3" (click)=[common.map()]>map</button>
+            <button type="submit" class="btn btn-lg b3" (click)=[common.map()]>map</button>
         </div>
       </div>
     
     <div class="falign">
    <div class="task1">
-      <label>Enter the clue as you have it</label>
+      <label>I Wake up When you say OK  _ _ _ _ _ _</label>
         <input type="text" class="form-control" name="tas1" [(ngModel)]="test"/><br>
       
   <div class="button row">
+         <div class="col-xs-4"><button type="submit"  class="btn btn-lg b1" (click)='[clue1()]' *ngIf="clueb==true">Clue 1</button></div>
          <div class="col-xs-4"><button type="submit" class="btn btn-lg b3" (click)='[done()]'>Proceed</button></div>
   </div>
   </div>

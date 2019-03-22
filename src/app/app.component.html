@@ -1,11 +1,18 @@
 <!-- <button (click)="registered=true">Register</button>
 <app-timer  [start]="registered"></app-timer> -->
-
 <div class="container">
-<app-timer  [start]="common.resetTimer"></app-timer>
-<app-register *ngIf="common.pageNumber==1"></app-register>
-<app-puzzle *ngIf="common.pageNumber==2"></app-puzzle>
-<app-screen1 *ngIf="common.pageNumber==3"></app-screen1>
-<app-screen2 *ngIf="common.pageNumber==4"></app-screen2>
+<div class="timer1"><h1><app-timer  [start]="common.resetTimer"></app-timer> </h1></div>
 </div>
+<!-- <app-timer  [start]="common.resetTimer"></app-timer> -->
+<app-register *ngIf="common.pageNumber==10"></app-register>
+<app-gameover *ngIf="common.pageNumber==9"></app-gameover>
+<app-puzzle *ngIf="common.pageNumber==0"></app-puzzle>
+<app-screen0 *ngIf="common.pageNumber==11"></app-screen0>
+<app-screen1 *ngIf="common.pageNumber==1"></app-screen1>
+<app-screen2 *ngIf="common.pageNumber==2"></app-screen2>
+<app-screen3 *ngIf="common.pageNumber==3"></app-screen3>
+<app-screen4 *ngIf="common.pageNumber==4"></app-screen4>
+<app-screen5 *ngIf="common.pageNumber==5"></app-screen5>
+<app-screen6 *ngIf="common.pageNumber==6"></app-screen6>
+<app-screen7 *ngIf="common.pageNumber==7"></app-screen7>
 <!-- <app-puzzle></app-puzzle> -->

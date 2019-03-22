@@ -1,0 +1,56 @@
+* {
+    font-family: 'Fresca', georgia, sans-serif;
+}
+body,html{
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+
+}
+.timer{
+    margin-top:20px;
+}
+.map{
+
+    margin-top: 20px;
+} 
+.falign{
+    display:flex;
+    height: 50vh;
+}
+.content1{
+    margin-top: 80px;
+    border: 5px solid black;
+    padding:5%;
+}
+.task1
+{
+     font-size: 25px;
+     margin: auto;
+ }
+ input{
+    width: 100%;
+ }
+
+ .task1 .button p
+{
+    display: inline;
+}
+
+button{
+    width: 110px;
+}
+.b4{
+    margin-left: 50%;
+    transform: translate(-50%,0);
+}
+body {
+    background-image: url("https://cdn.dribbble.com/users/448511/screenshots/4277999/gameover03.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+//   http://66.media.tumblr.com/f86c678ef16b8a9cff0ccbd5d9213e4f/tumblr_o0smkiE0Gp1qjrwyno1_1280.gif
+// https://i.gifer.com/origin/0a/0a1bae14b3b15a83c8f4bedc643f2647_w200.gif
+// https://gifimage.net/wp-content/uploads/2018/06/warning-gif-animated-7.gif
+// https://cdn.dribbble.com/users/448511/screenshots/4277999/gameover03.gif

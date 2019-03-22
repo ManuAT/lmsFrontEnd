@@ -14,6 +14,8 @@ import { Screen4Component } from './componet/screens/screen4/screen4.component';
 import { Screen5Component } from './componet/screens/screen5/screen5.component';
 import { Screen6Component } from './componet/screens/screen6/screen6.component';
 import { Screen7Component } from './componet/screens/screen7/screen7.component';
+import { GameoverComponent } from './componet/gameover/gameover.component';
+import { Screen0Component } from './componet/screens/screen0/screen0.component';
 
 
 
@@ -30,6 +32,8 @@ import { Screen7Component } from './componet/screens/screen7/screen7.component';
     Screen5Component,
     Screen6Component,
     Screen7Component,
+    GameoverComponent,
+    Screen0Component,
     
  
   ],
