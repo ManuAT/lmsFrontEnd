@@ -10,7 +10,7 @@ import {CommonService} from "../../services/common.service";
 export class PuzzleComponent implements OnInit {
 
   constructor(private common : CommonService){}
-  
+  isSolved = false;
   ngOnInit() {
     
   }
@@ -252,6 +252,7 @@ export class PuzzleComponent implements OnInit {
               $('.sidebar2').show();
               console.log("code is ");
               alert("code is ");
+              this.isSolved = true;
               solving = false;
           }
       };
@@ -346,11 +347,18 @@ export class PuzzleComponent implements OnInit {
                       $('.sidebar2').show();
                     console.log("ready");
                     alert("code is ");
+                    this.isSolved = true;
                       gameWon = true;
                   }
           }
       });
   });
+  }
+
+  done(){
+        console.log(this.isSolved);
+        
+      this.common.pageNumber=3;
   }
 
 }

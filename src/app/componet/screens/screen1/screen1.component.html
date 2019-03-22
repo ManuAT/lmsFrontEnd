@@ -1,0 +1,30 @@
+
+<body>
+  <div class="container">
+    <div class="row timer">
+      <div class="col-xs-6">
+          <h2> <app-timer></app-timer></h2>
+      </div>
+      <div class="col-xs-6 pull-right text-right">
+          <button type="submit" class="btn btn-lg b3">map</button>
+      </div>
+    </div>
+  <div class="content1">
+   <h2> I Live in Baker street. But not in 221 B.</h2>
+  </div>
+  <div class="falign">
+ <div class="task1">
+    <label>Enter the room code:</label>
+    	<input type="text" class="form-control" name="task1" [(ngModel)]="roomCode"/><br>
+    
+<div class="button row">
+       <div class="col-xs-4"><button type="submit"  class="btn btn-lg b1" (click)='[clue1()]' >Clue 1</button></div>
+       <div class="col-xs-4"><button type="submit" class="btn btn-lg b2" (click)='[clue2()]'>Clue 2</button></div>
+       <div class="col-xs-4"><button type="submit" class="btn btn-lg b3" (click)='[done()]'>Proceed</button></div>
+</div>
+</div>
+</div>  
+  </div>
+</body>
+
+

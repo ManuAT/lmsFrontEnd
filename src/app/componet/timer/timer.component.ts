@@ -23,7 +23,7 @@ export class TimerComponent implements OnChanges {
   }
   registered(){
     this.regTimer = this.common.regCommon;
-    console.log(this.regTimer);
+    console.log("hello timer");
     this.common.getDetails(this.regTimer).subscribe((data:any)=>{
      
       // console.log(new Date());
@@ -31,7 +31,7 @@ export class TimerComponent implements OnChanges {
       var totalLostMin = data.totalLostMin;
       var remainingSec = 7200-completedSeconds-(totalLostMin*60);
       this.timeLeft = Math.floor(remainingSec);
-      console.log(this.timeLeft);
+      console.log(this.timeLeft, this.common.pageNumber);
       this.startTimer()
   })
   }

@@ -1,12 +1,15 @@
-
+<body>
 <div class="container">
-  <p>
-   <label> please Enter the register Number</label><br>
+    <div class="task1">
+        <br><br>
+   <label> please Enter the register Number</label><br><br>
    <input [(ngModel)]="regCode" #ctrl="ngModel" required>
-    <br>
+   <br><br>
    {{regNumber}}
-   
-    <button class="button"  (click)="[validate()]" (click)="registered=true" >Register</button>
-    <app-timer  [start]="registered"></app-timer>
-  </p>
+   <div class="button row">
+      <div class="col-xs-12 col-lg-12"><button class="btn btn-lg b1"  (click)="[validate()]">Register</button></div>
+  </div>
+    <!-- <app-timer  [start]="registered"></app-timer> -->
+  </div>
 </div>
+</body>

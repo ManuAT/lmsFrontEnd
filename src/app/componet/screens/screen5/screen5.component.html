@@ -1,0 +1,25 @@
+<body>
+    <div class="container">
+        <div class="row timer">
+          <div class="col-xs-6">
+              <h2>00:11:59</h2>
+          </div>
+          <div class="col-xs-6 pull-right text-right">
+              <button type="submit" class="btn btn-lg b3">map</button>
+          </div>
+        </div>
+      
+      <div class="falign">
+     <div class="task1">
+        <label>Enter the room code you found</label>
+          <input type="text" class="form-control" name="tas1" [(ngModel)]="roomCode"/><br>
+        
+    <div class="button row">
+           <div class="col-xs-4"><button type="submit"  class="btn btn-lg b1" (click)='[clue1()]' >Clue 1</button></div>
+           <div class="col-xs-4"><button type="submit" class="btn btn-lg b2" (click)='[clue2()]'>Clue 2</button></div>
+           <div class="col-xs-4"><button type="submit" class="btn btn-lg b3" (click)='[done()]'>Proceed</button></div>
+    </div>
+    </div>
+    </div>  
+      </div>
+    </body>

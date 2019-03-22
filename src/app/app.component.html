@@ -2,7 +2,10 @@
 <app-timer  [start]="registered"></app-timer> -->
 
 <div class="container">
-<app-register *ngIf="pageNumber==1"></app-register>
-<app-puzzle *ngIf="pageNumber==2"></app-puzzle>
-<app-timer *ngIf="registered==true"></app-timer>
+<app-timer  [start]="common.resetTimer"></app-timer>
+<app-register *ngIf="common.pageNumber==1"></app-register>
+<app-puzzle *ngIf="common.pageNumber==2"></app-puzzle>
+<app-screen1 *ngIf="common.pageNumber==3"></app-screen1>
+<app-screen2 *ngIf="common.pageNumber==4"></app-screen2>
 </div>
+<!-- <app-puzzle></app-puzzle> -->

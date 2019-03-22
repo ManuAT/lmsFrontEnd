@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {CommonService} from "./services/common.service";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  pageNumber=2;
+export class AppComponent implements OnInit{
+  constructor(private common: CommonService){
+
+  }
+  ngOnInit(){
+    this.pageNumber=this.common.pageNumber
+    
+  }
+  pageNumber;
   registered=false;
 }

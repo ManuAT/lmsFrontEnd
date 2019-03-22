@@ -5,7 +5,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CommonService {
 regCommon : number;
+pageNumber=1;
+resetTimer = false;
   constructor(private http: HttpClient) { }
+
   getDetails(code){
     return this.http.get('http://localhost:8080/api/lms',{params:{code}})
   }
@@ -18,6 +21,7 @@ regCommon : number;
     create(code){
       return this.http.post('http://localhost:8080/api/lms',{code})
     } 
+
 }
 
 

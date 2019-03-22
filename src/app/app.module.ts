@@ -7,7 +7,15 @@ import { RegisterComponent } from './componet/register/register.component';
 import { PuzzleComponent } from './componet/puzzle/puzzle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TimerComponent } from './componet/timer/timer.component';
-import { TaskComponent } from './componet/task/task.component';
+import { Screen1Component } from './componet/screens/screen1/screen1.component';
+import { Screen2Component } from './componet/screens/screen2/screen2.component';
+import { Screen3Component } from './componet/screens/screen3/screen3.component';
+import { Screen4Component } from './componet/screens/screen4/screen4.component';
+import { Screen5Component } from './componet/screens/screen5/screen5.component';
+import { Screen6Component } from './componet/screens/screen6/screen6.component';
+import { Screen7Component } from './componet/screens/screen7/screen7.component';
+
+
 
 @NgModule({
   declarations: [
@@ -15,7 +23,15 @@ import { TaskComponent } from './componet/task/task.component';
     RegisterComponent,
     PuzzleComponent,
     TimerComponent,
-    TaskComponent
+    Screen1Component,
+    Screen2Component,
+    Screen3Component,
+    Screen4Component,
+    Screen5Component,
+    Screen6Component,
+    Screen7Component,
+    
+ 
   ],
   imports: [
     BrowserModule,
