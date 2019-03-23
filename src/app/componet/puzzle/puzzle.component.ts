@@ -370,7 +370,7 @@ export class PuzzleComponent implements OnInit {
   }
 
   done(){
-    this.common.taskupdate(this.common.regCommon,2,null).subscribe((data)=>{
+    this.common.taskupdate(this.common.regCommon,11,null).subscribe((data)=>{
         // console.log(data,"hello");
         // alert("Remeber this");
         this.common.pageNumber=11;
