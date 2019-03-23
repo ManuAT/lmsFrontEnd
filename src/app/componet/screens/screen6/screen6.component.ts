@@ -32,7 +32,7 @@ clueb : boolean;
   {
     if(this.test.toLowerCase()=="err404")
     {
-  this.common.taskupdate(this.common.regCommon,2,null).subscribe((data)=>{
+  this.common.taskupdate(this.common.regCommon,7,null).subscribe((data)=>{
     // console.log(data,"hello");
     // alert("Remeber this");
     this.common.pageNumber=7;
