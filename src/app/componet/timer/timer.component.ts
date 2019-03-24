@@ -60,7 +60,13 @@ startTimer() {
         var mDisplay = m>=10?+m:"0"+m;
         var sDisplay = s>=10?":"+s:":0"+s;
         this.timeLeftString = hDisplay + mDisplay + sDisplay;
+        // console.log(this.timeLeftString);
         
+        if(h<0)
+        {
+          console.log("to game over page") 
+          this.common.pageNumber=9;
+        }
     },1000)
   }
 }
