@@ -14,7 +14,7 @@ test : String;
   }
   done()
   {
-    if(this.test.toUpperCase() == "THE LAST THING YOU'RE GONNA DO IS EAT" || this.test.toUpperCase() == "WATER SUPPLY IN BAKER STREET IS BROKEN" || this.test.toUpperCase() == "ONLY 1729 CAN HELP US NOW!")
+    if(this.test.toUpperCase() == "POLICE HQ" || this.test.toUpperCase() == "1729" || this.test.toUpperCase() == "ROAD")
     {
   this.common.taskupdate(this.common.regCommon,3,null).subscribe((data)=>{
     // console.log(data,"hello");

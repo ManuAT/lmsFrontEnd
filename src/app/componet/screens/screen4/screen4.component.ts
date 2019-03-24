@@ -46,7 +46,7 @@ clueb2 : boolean;
 
   done()
   {
-    if(this.test.toLowerCase()=="prison")
+    if(this.test.toLowerCase()=="pr1510n")
     {
   this.common.taskupdate(this.common.regCommon,5,null).subscribe((data)=>{
     // console.log(data,"hello");
